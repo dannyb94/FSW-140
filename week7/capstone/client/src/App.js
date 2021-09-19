@@ -50,7 +50,7 @@ export default function App() {
   const inventoryList = inventory.map(item => <Bob {...item} item={item} deleteInventoryItem={deleteInventoryItem}  editInventoryItem={editInventoryItem}  key={item.episode} />)
 
   return (
-    <div>
+    <div id='main'>
       <h1 id='BigBob'>Bob Ross</h1>
       <BobHandler  btnText='Add Item' submit= {addItem} />
       {inventoryList} 
