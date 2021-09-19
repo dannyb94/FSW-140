@@ -1,0 +1,136 @@
+/*App.js*/
+#BigBob {
+    text-align: center;
+    font-size: 155px;
+    font-family: 'Sacramento', cursive;
+    margin: 10px 0 0 0;
+    color: #000f89;
+}
+
+/*Bob.js*/
+#cntnr1 {
+    position: relative;
+    border: black 1px solid;
+    border-radius: 6px;
+    margin: 20px 0;
+    width: 50%;
+    left: 23.6%;
+    padding: 0 0 20px 25px;
+}
+
+#dltBtn, #editBtn, #closeBtn, #postSub {
+    border-radius: 4px;
+    border: none;
+    margin: 0 6px 0 0;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+#dltBtn {
+    background-color: #ffa318;
+    box-shadow: 2px 2px 3px #00000021;
+    margin-bottom: 5px;
+}
+
+#dltBtn:hover {
+    background-color: #c47f17;
+    box-shadow: 2px 2px 3px #00000021;
+    margin-bottom: 5px;
+}
+
+#dltBtn:active {
+    background-color: #ffb546;
+    box-shadow: 2px 2px 3px #00000021;
+    margin-bottom: 5px;
+}
+
+#editBtn {
+    background-color: #064263;
+    box-shadow: 2px 2px 3px #00000021;
+    margin-bottom: 5px;
+}
+
+#editBtn:hover {
+    background-color: #042a3f;
+    box-shadow: 2px 2px 3px #00000021;
+    margin-bottom: 5px;
+}
+
+#editBtn:active {
+    background-color: #0a6799;
+    box-shadow: 2px 2px 3px #00000021;
+    margin-bottom: 5px;
+}
+
+#closeBtn {
+    background-color: #e6e6e6;
+    color: #b5bfc7;
+    box-shadow: 2px 2px 3px #00000021;
+}
+
+#closeBtn:hover {
+    background-color: #d6d6d6;
+    color: #9fa8af;
+    box-shadow: 2px 2px 3px #00000021;
+}
+
+#closeBtn:active {
+    background-color: #c4c4c4;
+    color: #727980;
+    box-shadow: 2px 2px 3px #00000021;
+}
+
+#postSub {
+    border-radius: 4px;
+    border: none;
+    background-color: #caf881;
+    color: #a0cf80;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 10px;
+    box-shadow: 2px 2px 3px #00000021;
+}
+
+#postSub:hover {
+    border-radius: 4px;
+    border: none;
+    background-color: #a8da58;
+    color: #91bd4b;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 10px;
+    box-shadow: 2px 2px 3px #00000021;
+}
+
+#postSub:active {
+    border-radius: 4px;
+    border: none;
+    background-color: #caf881;
+    color: #a0cf80;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 10px;
+    box-shadow: 2px 2px 3px #00000021;
+}
+
+
+/*BobHandler.js*/
+#alignIt {
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+}
+
+ .switchUp {
+    border: solid #000000 1px;
+    border-radius: 4px;
+    margin: 0 1px;
+    font-size: 16px;
+    font-weight: 700;
+} 
+
+::placeholder {
+    color: #d4d4d4;
+}
