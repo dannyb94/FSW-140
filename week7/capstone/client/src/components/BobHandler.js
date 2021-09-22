@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-export default function BobHandler({ btnText, submit, episode, details, title, id }){
-    const initialInputs = { episode: episode || '', details: details || '', title: title || '' }
+export default function BobHandler({ btnText, submit, EPISODE, details, TITLE, id }){
+    const initialInputs = { EPISODE: EPISODE || '', details: details || '', TITLE: TITLE || '' }
     const [inputs, setInputs] = useState(initialInputs);
 
     const handleChange = (e) => {
@@ -18,8 +18,8 @@ export default function BobHandler({ btnText, submit, episode, details, title, i
     return (
         <form onSubmit={handleSubmit}>
             <span id='alignIt'>
-                <input details="text"  name="episode"  value={inputs.episode}  className='switchUp'  onChange={handleChange}  placeholder="Season & Episode Number"/>
-                <input details="text"  name="title"  value={inputs.title}  className='switchUp'  onChange={handleChange}  placeholder="Name of Episode"/>
+                <input details="text"  name="EPISODE"  value={inputs.EPISODE}  className='switchUp'  onChange={handleChange}  placeholder="Season & Episode Number"/>
+                <input details="text"  name="TITLE"  value={inputs.TITLE}  className='switchUp'  onChange={handleChange}  placeholder="Name of Episode"/>
                 <input details="text"  name="details"  value={inputs.details}  className='switchUp'  onChange={handleChange}  placeholder="Episode Details"/>
             
                 <button id="postSub">{btnText}</button>

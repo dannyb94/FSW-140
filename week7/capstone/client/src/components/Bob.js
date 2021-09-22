@@ -3,7 +3,7 @@ import { useState } from "react";
 import BobHandler from "./BobHandler";
 
 
-export default function Inventory(prop){
+export default function Bob(prop){
     const [editToggle, setEditToggle] = useState(false)
     const { deleteInventoryItem, editInventoryItem, EPISODE, item, TITLE, id } = prop
     var details = Object.entries(item)
@@ -15,7 +15,7 @@ export default function Inventory(prop){
                 <div id='div-cntnr'>
                     <h2>EPISODE: {EPISODE}</h2>
                     <p>TITLE: {TITLE}</p>
-                    <p style = {{overflowY: "scroll", height: "175px"}} >{details.map(detail => {
+                    <p style = {{overflowY: "scroll", height: "175px"}} > {details.map(detail => {
                                     if(detail[0] === "TITLE" || detail[0] === "EPISODE" || detail[0] === "id"){
                                         return ("") 
                                     } else {

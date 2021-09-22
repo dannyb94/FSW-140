@@ -10,7 +10,7 @@ export default function App() {
   const getInventory = () => {
     axios.get('http://localhost:4000/rows')
       .then(res => {
-        console.log(res)
+        //console.log(res)
         setInventoryItems(res.data)
       })
       .catch(err => console.log(err.response.data.errMsg))
@@ -22,7 +22,7 @@ export default function App() {
 
   const addItem = (newInventory) => {
     console.log(newInventory)
-    axios.post('http://localhost:4000/rows', newInventory)
+    axios.post('http://localhost:4000/insertRow', newInventory)
       .then(res => {
         setInventoryItems(prevInventory => [...prevInventory, res.data])
       })
@@ -30,7 +30,7 @@ export default function App() {
   }
 
   const deleteInventoryItem = (itemId) => {
-    axios.delete(`http://localhost:4000/rows/${itemId}`)
+    axios.delete(`http://localhost:4000/deleteRow/${itemId}`)
       .then(res => {
         setInventoryItems(prevInventory => prevInventory.filter(item => item._id !== itemId))
       })
@@ -38,16 +38,18 @@ export default function App() {
   }
 
   const editInventoryItem = (updates, itemId) => {
-    axios.put(`http://localhost:4000/rows/${itemId}`, updates)
+    axios.put(`http://localhost:4000/updateRow/${itemId}`, updates)
       .then(res => {
         setInventoryItems(prevInventory => prevInventory.map(item => {
-          return item._id !== itemId ? item : res.data}))
+          return item._id !== itemId ? item : res.data
+        }))
       })
       .catch(err => console.log(err))
   }
 
+
   //-----------------------------------------------
-  const inventoryList = inventory.map(item => <Bob {...item} item={item} deleteInventoryItem={deleteInventoryItem}  editInventoryItem={editInventoryItem}  key={item.episode} />)
+  const inventoryList = inventory.map(item => <Bob {...item} item={item} getInventory={getInventory} addItem={addItem} deleteInventoryItem={deleteInventoryItem}  editInventoryItem={editInventoryItem}  key={item.EPISODE} />)
 
   return (
     <div id='main'>

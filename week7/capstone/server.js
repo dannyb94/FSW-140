@@ -42,7 +42,7 @@ app.post('/insertColumn', (req, res) => {
 app.post('/insertRow', (req, res) => {
     let post = req.body  //req.body.product etc
     console.log(req.body)
-    let myQuery = `INSERT INTO RossFiles (episode, title, details) VALUES ('${post.episode}', '${post.title}', '${post.details};`
+    let myQuery = `INSERT INTO RossFiles (episode, title, details) VALUES ('${post.EPISODE}', '${post.TITLE}', '${post.details};`
     db.query(myQuery, (err, result) => {
         if(err){
             throw err;
